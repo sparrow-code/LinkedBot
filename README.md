@@ -65,6 +65,7 @@ Before running the bot, you need to configure the necessary settings.
 
 <details>
   <summary><strong>Browser</strong></summary>
+  
   ### To Start Browser
   ```
   [GET] /api/v1/browser/start

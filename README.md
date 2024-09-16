@@ -2,6 +2,10 @@
 
 ![Logo](https://res.cloudinary.com/dhcybnykt/image/upload/v1726500021/df22sdhfnnxhvgcsaotn.png)
 
+<p align="center">
+  <img src="https://res.cloudinary.com/dhcybnykt/image/upload/v1726500021/df22sdhfnnxhvgcsaotn.png" alt="Logo" />
+</p>
+
 This is a bot designed to automate actions on LinkedIn using Node.js. The bot can be configured to perform various LinkedIn-related tasks based on the provided credentials and settings.
 
 ## Requirements

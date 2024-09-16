@@ -63,14 +63,46 @@ Before running the bot, you need to configure the necessary settings.
 
 ## API Details
 
-- <details>
+<details>
   <summary><strong>Browser</strong></summary>
-  /api/v1/browser/start
-  /api/v1/browser/stop
-  /api/v1/browser/page
+  ### To Start Browser
+  ```
+  [GET] /api/v1/browser/start
+  ```
+
+### To Stop Browser
+
+```
+[GET] /api/v1/browser/stop
+```
+
+### To Get Page
+
+```
+[GET] /api/v1/browser/page
+```
 
   </details>
 
----
+  <details>
+  <summary><strong>Authentication</strong></summary>
+
+### To Login Linkdin
+
+```
+[POST] /api/v1/auth/login
+{
+  "username" : "",
+  "password" : ""
+}
+```
+
+### To Open Linkdin
+
+```
+[GET] /api/v1/auth/open
+```
+
+  </details>
 
 Feel free to contribute or open issues for any bugs or suggestions.

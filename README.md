@@ -1,9 +1,7 @@
 # LinkedBot
 
-![Logo](https://res.cloudinary.com/dhcybnykt/image/upload/v1726500021/df22sdhfnnxhvgcsaotn.png)
-
 <p align="center">
-  <img src="https://res.cloudinary.com/dhcybnykt/image/upload/v1726500021/df22sdhfnnxhvgcsaotn.png" alt="Logo" />
+  <img src="https://res.cloudinary.com/dhcybnykt/image/upload/v1726500021/df22sdhfnnxhvgcsaotn.png" alt="Logo" width="40" height="40" />
 </p>
 
 This is a bot designed to automate actions on LinkedIn using Node.js. The bot can be configured to perform various LinkedIn-related tasks based on the provided credentials and settings.
@@ -63,9 +61,15 @@ Before running the bot, you need to configure the necessary settings.
 2. Save the file after adding your details.
 3. Run Command `npm run dev`
 
-## Upcoming Features
+## API Details
 
-- **API support**: I will be writing API endpoints in the near future to interact with this bot programmatically.
+- <details>
+  <summary><strong>Browser</strong></summary>
+  /api/v1/browser/start
+  /api/v1/browser/stop
+  /api/v1/browser/page
+
+  </details>
 
 ---
 

@@ -1,6 +1,6 @@
 # LinkedBot
 
-![Logo](https://raw.githubusercontent.com/sparrow-code/LinkedBot/802db4823fe44db821201c97d266a2664b4d4f07/public/logo.png)
+![Logo](https://res.cloudinary.com/dhcybnykt/image/upload/v1726500021/df22sdhfnnxhvgcsaotn.png)
 
 This is a bot designed to automate actions on LinkedIn using Node.js. The bot can be configured to perform various LinkedIn-related tasks based on the provided credentials and settings.
 

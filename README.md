@@ -131,3 +131,8 @@ JSON / BODY : {
   </details>
 
 Feel free to contribute or open issues for any bugs or suggestions.
+
+## CREDITS
+
+**IDEA**: ALEX
+**DEVELOP**: [Shivam Dwivedi](https://github.com/sparrow-code)

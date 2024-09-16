@@ -64,12 +64,14 @@ Before running the bot, you need to configure the necessary settings.
 ## API Details
 
 <details>
-  <summary><strong>Browser</strong></summary>
+  <summary>
+    <strong>Browser</strong>
+  </summary>
   
-  ### To Start Browser
-  ```
-  [GET] /api/v1/browser/start
-  ```
+### To Start Browser
+```
+[GET] /api/v1/browser/start
+```
 
 ### To Stop Browser
 
@@ -86,15 +88,17 @@ Before running the bot, you need to configure the necessary settings.
   </details>
 
   <details>
-  <summary><strong>Authentication</strong></summary>
+    <summary>
+        <strong>Authentication</strong>
+    </summary>
 
 ### To Login Linkdin
 
 ```
 [POST] /api/v1/auth/login
-{
-  "username" : "",
-  "password" : ""
+JSON BODY : {
+"username" : "",
+"password" : ""
 }
 ```
 
@@ -102,6 +106,26 @@ Before running the bot, you need to configure the necessary settings.
 
 ```
 [GET] /api/v1/auth/open
+```
+
+  </details>
+
+  <details>
+    <summary>
+        <strong>Post</strong>
+    </summary>
+
+### Schedule Post
+
+```
+[POST] /api/v1/schedule/post?type=(me/company)
+
+JSON / BODY : {
+    content : "This is Dummy Content /n Love You All /n#LINKDIN #BOT #AUTOMATION",
+    date : "9/16/2024", // MM/DATE/YEAR
+    time : "9:30 PM" // HH:MM AM/PM
+
+}
 ```
 
   </details>

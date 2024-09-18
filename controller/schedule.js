@@ -25,8 +25,6 @@ const schedulePost = async (req, res) => {
     // ! To Write Content
     await WriteContent(page, content);
 
-    await delay(2000);
-
     // ! Schedule Post
     await Schedule(page, date, time);
 
@@ -47,12 +45,13 @@ const WriteContent = async (page, content) => {
     );
 
     await page.waitForSelector(".ql-editor");
-
+    await delay(2000);
     // Focus and set text inside the contenteditable div
     await page.evaluate((content) => {
       const editor = document.querySelector(".ql-editor");
       editor.innerHTML = content;
     }, content);
+    await delay(2000);
   } catch (err) {
     throw err;
   }
@@ -75,7 +74,6 @@ const Schedule = async (page, date, time) => {
       input.value = "";
     });
     await page.type("#share-post__scheduled-date", date);
-
     await delay(2000);
 
     // ! Fill The Time
@@ -86,10 +84,9 @@ const Schedule = async (page, date, time) => {
       input.value = "";
     });
     await page.type("#share-post__scheduled-time", time);
-
     await delay(2000);
 
-    /* await page.evaluate(() => {
+    await page.evaluate(() => {
       document
         .querySelector('.share-box-footer__primary-btn[aria-label="Next"]')
         .click();
@@ -97,7 +94,7 @@ const Schedule = async (page, date, time) => {
 
     await page.evaluate(() => {
       document.querySelector(".share-actions__primary-action").click();
-    }); */
+    });
   } catch (err) {
     throw err;
   }

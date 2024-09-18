@@ -1,23 +1,27 @@
 import { startBrowser, getPage } from "../utils/browser.js";
 
 const LoginLinkdin = async (req, res) => {
-  const { username, password } = req.body;
-  // ! Open Browser with Login Page
-  await startBrowser();
-  const { page } = await getPage();
+  try {
+    const { username, password } = req.body;
+    // ! Open Browser with Login Page
+    await startBrowser();
+    const { page } = await getPage();
 
-  const loginLink = `https://www.linkedin.com/uas/login`;
+    const loginLink = `https://www.linkedin.com/uas/login`;
 
-  // ! Login Linkdin By Credentials in Post
-  await page.goto(loginLink, { waitUntil: "networkidle0" });
-  await page.type("#username", username);
-  await page.type("#password", password);
-  await page.click('button[type="submit"]');
+    // ! Login Linkdin By Credentials in Post
+    await page.goto(loginLink, { waitUntil: "networkidle0" });
+    await page.type("#username", username);
+    await page.type("#password", password);
+    await page.click('button[type="submit"]');
 
-  await page.waitForNavigation({ waitUntil: "networkidle0" });
+    await page.waitForNavigation({ waitUntil: "networkidle0" });
 
-  // ! Login Linkdin By Credentials in Post
-  res.status(200).json({ message: "Login Route" });
+    // ! Login Linkdin By Credentials in Post
+    res.status(200).json({ message: "Login Route" });
+  } catch (err) {
+    console.log("Login Error >>>", err.message);
+  }
 };
 
 const OpenLinkdin = async (req, res) => {

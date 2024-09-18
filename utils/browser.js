@@ -23,8 +23,8 @@ const startBrowser = async () => {
       ],
       userDataDir: "./browserData",
     });
-    page = await browser.newPage();
 
+    page = await browser.newPage();
     return { status: true, message: "Browser Started", browser: browser };
   } catch (err) {
     console.log("Error on Browser Start : ", err.message);
